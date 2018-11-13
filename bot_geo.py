@@ -1,3 +1,4 @@
+#!/usr/bin/python3.6
 from urllib.request import Request, urlopen
 from bs4 import BeautifulSoup
 import time
@@ -20,30 +21,14 @@ def post():
 	bot = telebot.TeleBot(BOT_TOKEN)
 	time.sleep(1)
 	bot.send_message(CHANNEL_NAME, c)
-	time.sleep(180)
+	time.sleep(1)
 
-a=""
-b=""
+with open('/home/den/natgeo/url', 'r') as f:
+	s=f.readlines()
 c=link()
-while True:
-	time.sleep(2)
-	if a == c:
-		print("The strings are the same a")
-		time.sleep(5)
-		link()
-		time.sleep(5)
-		c=link()
-		time.sleep(1360)
-	elif b == c:
-		print("The strings are the same b")
-		time.sleep(5)
-		link()
-		time.sleep(5)
-		c=link()
-		time.sleep(1360)
-	else:
-		print("The strings are not the same")
-		post()
-		print (c)
-		a=b
-		b=c
+if s[0] == c:
+	print("The strings are the same")
+else:
+	post()
+	with open('/home/den/natgeo/url', 'w') as f:
+		f.write(c)
