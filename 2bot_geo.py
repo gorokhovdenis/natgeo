@@ -9,10 +9,10 @@ def link():
 	time.sleep(2)
 	page=urlopen(req).read()
 	time.sleep(2)
-	soup = BeautifulSoup(page,"html.parser")
+	soup = BeautifulSoup(page,"lxml")
 	time.sleep(1)
 	data = json.loads(soup.find('script', type='text/json').find_next('script', type='text/json').text)
-	link = (data["body"][0]['homepage_package']["cards"][0]['uri'])
+	link = (data["body"][0]['homepage_package']["cards"][1]['uri'])
 	return link
 def post():
 	BOT_TOKEN ="681010915:AAFmaiTSpNN7DfVVY3Bp2pTjuHtg-PsccfE"
@@ -23,12 +23,12 @@ def post():
 	bot.send_message(CHANNEL_NAME, c)
 	time.sleep(1)
 
-with open('/home/den/natgeo/url', 'r') as f:
+with open('/home/den/natgeo/2url', 'r') as f:
 	s=f.readlines()
 c=link()
 if s[0] == c:
 	print("The strings are the same")
 else:
 	post()
-	with open('/home/den/natgeo/url', 'w') as f:
+	with open('/home/den/natgeo/2url', 'w') as f:
 		f.write(c)

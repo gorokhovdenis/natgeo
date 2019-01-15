@@ -1,0 +1,2266 @@
+
+<!DOCTYPE html>
+
+<html class="Desktop NotIE" id="Content_Html">
+<head>
+<!-- Meta Data -->
+<meta charset="utf-8"/><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e2716af964","applicationID":"9233074","transactionName":"YQBRZBBYVkZTVhEKVlhKcmMyFlZQRUZKB1xQBEZcFhdZRkJN","queueTime":0,"applicationTime":82,"ttGuid":"B3273F352B6F73C5","agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now()])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1099.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script>
+<meta content="Read all the latest news on Nat Geo TV." name="description"/>
+<meta content="width=1024, user-scalable=no" name="viewport"/>
+<!-- Open Graph -->
+<meta content="Read all the latest news on Nat Geo TV." property="og:description"/>
+<meta content="https://www.nationalgeographic.com.au/content/social/social.png" property="og:image"/>
+<meta content="1600" property="og:image:width"/>
+<meta content="900" property="og:image:height"/>
+<meta content="article" property="og:type"/>
+<meta content="https://www.nationalgeographic.com.au/news/" property="og:url"/>
+<meta content="News" property="og:title"/>
+<!-- Title -->
+<title>News - National Geographic</title>
+<!-- CSS -->
+<link href="/includes/css/master.less?IE=false&amp;FeedTablet=980px&amp;FeedPadding=40px&amp;ItemMargin=40px&amp;StickyNavigation=60px&amp;Viewport=1024px&amp;Scrollbar=17px&amp;Desktop=1660px&amp;Tablet=1024px&amp;Retina=640px&amp;Mobile=320px&amp;FeedDesktop=1660px&amp;FeedLaptop=1320px&amp;FeedRetina=640px&amp;FeedMobile=300px&amp;ItemLargeWidth=640px&amp;ItemSmallWidth=300px&amp;ItemSmallHeight=169px&amp;Leaderboard=728px&amp;LeaderboardPadding=10px&amp;ExploreTablet=900px&amp;ExplorePadding=40px&amp;Logo=134px&amp;Hamburger=1240px&amp;PillarCollapse=1374px&amp;PillarStack=1108px&amp;Navigation=60px&amp;Blue=%23003A73&amp;LightBlue=%2300468C&amp;DarkBlue=%23003A73&amp;Yellow=%23FED931&amp;LightYellow=%23FFE84D&amp;GreyBorder=%23EBEBEB&amp;GreyBackground=%23FAFAFA&amp;GreyRollover=%23AFAFAF&amp;LightGreyBackground=%23FEFEFE&amp;v=30" rel="stylesheet" type="text/css"/>
+<!-- Icon -->
+<link href="/content/social/favicon.ico?v=30" rel="shortcut icon"/>
+<link href="/content/social/apple-touch-icon.png?v=30" rel="apple-touch-icon"/>
+<!-- Links -->
+<link href="https://www.nationalgeographic.com.au/news/?p=2" rel="next">
+<!-- Canonical -->
+<link href="https://www.nationalgeographic.com.au/news/" rel="canonical">
+<link href="https://www.nationalgeographic.com.au/news/" hreflang="en-au" rel="alternate"/>
+<link href="http://www.nationalgeographic.com/latest-stories/" hreflang="en-us" rel="alternate"/>
+<!-- Head -->
+<!-- Twitter Cards -->
+<meta content="summary" name="twitter:card"/>
+<meta content="@natgeoau" name="twitter:site"/>
+<meta content="News" name="twitter:title"/>
+<meta content="Read all the latest news on Nat Geo TV." name="twitter:description"/>
+<meta content="https://www.nationalgeographic.com.au/content/social/social.png" name="twitter:image"/>
+<!-- App Banner -->
+<meta content="app-id=1233901431" name="apple-itunes-app"/>
+<meta content="app-id=com.natgeo.ng1au_en" name="google-play-app"/>
+<link href="/includes/smart-app-banner/smart-app-banner.css?v=30" rel="stylesheet" type="text/css"/>
+<!-- Google Analytics -->
+<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+<script type="text/javascript">
+		try {
+			
+			// FIC Global Online Tracker ID
+			var pageTracker = _gat._getTracker("UA-6702025-2");
+			pageTracker._trackPageview();
+			
+			// NatGeo Tracker ID
+			var secondTracker = _gat._getTracker("UA-6350783-1");
+			secondTracker._trackPageview();
+			
+		} catch (err) {
+		} 
+	</script>
+<!-- Hotjar Tracking Code for www.nationalgeographic.com.au -->
+<script>
+		(function (h, o, t, j, a, r) {
+			h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+			h._hjSettings = { hjid: 38307, hjsv: 5 };
+			a = o.getElementsByTagName('head')[0];
+			r = o.createElement('script'); r.async = 1;
+			r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+			a.appendChild(r);
+		})(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+	</script>
+<!-- Facebook Pixel Code -->
+<script>
+	!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+	n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+	n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+	t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+	document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+	fbq('init', '1702783066652362');
+	fbq('track', "PageView");</script>
+<noscript><img height="1" src="https://www.facebook.com/tr?id=1702783066652362&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/></noscript>
+<!-- End Facebook Pixel Code -->
+<!-- Chook TV -->
+<link href="/chooktv/dist/chooktv.css?v=30" rel="stylesheet" type="text/css"/>
+<!--[if lt IE 9]>
+		<script src="/chooktv/dist/chooktv-ie.min.js?v=30"></script>
+	<![endif]-->
+<script>
+		window._tfsc = window._tfsc || {};
+		_tfsc['staging'] = [];
+		_tfsc['production'] = ["www.optus.com.au", "hrtest.integratedmultimedia.net", "dept.optus.com.au", "pages.e.optus.com.au", "offer.optus.com.au", "manage.sport.optus.com.au","www.nationalgeographic.com.au"];
+		_tfsc['STAGING_URL'] = 'd2j8jkom7xmn9n.cloudfront.net/psp/optus-v1-001/247px.js';
+		_tfsc['PRODUCTION_URL'] = 'd1af033869koo7.cloudfront.net/psp/optus-v1-001/247px.js';
+		_tfsc['CUSTOM_TRACK_URL'] = 'd34xv0c5kwdgb0.cloudfront.net/psp/optus-v1-001/cpxt.js';
+		_tfsc['COOKIE_NAME'] = 'sn.pxpath';
+		_tfsc.j=function(b){var e=b+'=';var a=document.cookie.split(';');for(var d=0;d<a.length;d++){var f=a[d];while(f.charAt(0)==' '){f=f.substring(1,f.length)}if(f.indexOf(e)==0){return f.substring(e.length,f.length)}}return null};_tfsc.getPath=function(){var d=_tfsc.j(_tfsc.COOKIE_NAME);if(null!=d){return d}for(var b=0;b<_tfsc.staging.length;b++){if(location.host==_tfsc.staging[b]){return _tfsc.STAGING_URL}}for(var a=0;a<_tfsc.production.length;a++){if(location.host==_tfsc.production[a]){return _tfsc.PRODUCTION_URL}}var c=encodeURIComponent(window.location.href.substring(0,100));return _tfsc.CUSTOM_TRACK_URL+'?msg=DOMAIN_CONFIG_NOT_FOUND&pageUrl='+c};(function(){var c=document.createElement('script');c.type='text/javascript';c.async=true;c.src=document.location.protocol+'//'+_tfsc.getPath();var a=document.getElementsByTagName('script')[0];a.parentNode.insertBefore(c,a)})();
+	</script>
+<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-22088848-27', 'auto');
+		ga('send', 'pageview');
+	</script>
+<!-- Head -->
+</link></link></head>
+<body id="Content_Body">
+<!-- Content -->
+<!-- Google Tag Manager -->
+<noscript><iframe height="0" src="//www.googletagmanager.com/ns.html?id=GTM-PRF2L6" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+	new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+	})(window,document,'script','dataLayer','GTM-PRF2L6');</script>
+<!-- End Google Tag Manager -->
+<!-- Smart Banner -->
+<!-- Chook -->
+<div class="Chook Layout">
+<!-- Leaderboard -->
+<div class="Advert Leaderboard" id="Content_Content_Leaderboard">
+<div>
+<div>
+<span class="mcnamf" title="728x90"><!-- Advert --></span>
+</div>
+</div>
+</div>
+<!-- Navigation -->
+<div class="Navigation">
+<!-- Menu -->
+<ul class="Menu C9" id="Content_Content_CollapsedNavigation_Wrapper">
+<li class="Item Text Home C1" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_0">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_0">
+<span class="Text">Home</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Text SignIn C2" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_1">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/mydetails/" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_1">
+<span class="Text">Sign In</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Parent Text Explore C3" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_2">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/explore/" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_2">
+<span class="Text">Explore</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_0">
+<a class="australia" href="/australia/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_0">
+<span class="Text">Australia</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_1">
+<a class="animals" href="/animals/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_1">
+<span class="Text">Animals</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_2">
+<a class="engineering" href="/engineering/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_2">
+<span class="Text">Engineering</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_3">
+<a class="history" href="/history/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_3">
+<span class="Text">History</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_4">
+<a class="nature" href="/nature/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_4">
+<span class="Text">Nature</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_5">
+<a class="people" href="/people/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_5">
+<span class="Text">People</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_6">
+<a class="science" href="/science/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_6">
+<span class="Text">Science</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_7">
+<a class="space" href="/space/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_7">
+<span class="Text">Space</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Item_8">
+<a class="travel" href="/travel/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_2_Link_8">
+<span class="Text">Travel</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Text Videos C4" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_3">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/videos/" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_3">
+<span class="Text">Videos</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Text Selected C5" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_4">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/news/" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_4">
+<span class="Text">News</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Parent Text TV C6" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_5">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/tv/" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_5">
+<span class="Text">TV</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_5_Item_0">
+<a class="Shows" href="/tv/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_5_Link_0">
+<span class="Text">Shows</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_5_Item_1">
+<a class="TV Guide" href="/tvguide/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_5_Link_1">
+<span class="Text">TV Guide</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Parent Text Travel C7" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_6">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/travel/" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_6">
+<span class="Text">Travel</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_6_Item_0">
+<a class="Destinations" href="/travel/destinations" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_6_Link_0">
+<span class="Text">Destinations</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_6_Item_1">
+<a class="Trip Types" href="/travel/trip-types" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_6_Link_1">
+<span class="Text">Trip Types</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_6_Item_2">
+<a class="Why Travel With Us" href="/travel/why-travel-with-us" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_6_Link_2">
+<span class="Text">Why Travel With Us?</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_6_Item_3">
+<a class="How To Book" href="/travel/how-to-book" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_6_Link_3">
+<span class="Text">How To Book</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Parent Text Store C8" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_7">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/store/" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_7">
+<span class="Text">Store</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li class="Last" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_7_Item_0">
+<a class="Luggage" href="/store/luggage" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_7_Link_0">
+<span class="Text">Luggage</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Span Parent Text More Last C9" id="Content_Content_CollapsedNavigation_MenuRepeater_Item_8">
+<div class="Container">
+<span class="Elements">
+<span class="Link" id="Content_Content_CollapsedNavigation_MenuRepeater_Link_8">
+<span class="Text">More</span>
+</span>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_8_Item_0">
+<a class="Events" href="/events/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_8_Link_0">
+<span class="Text">Events</span>
+</a>
+</li>
+<li id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_8_Item_1">
+<a class="App" href="/app/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_8_Link_1">
+<span class="Text">App</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_8_Item_2">
+<a class="Win" href="/win/" id="Content_Content_CollapsedNavigation_MenuRepeater_DropdownRepeater_8_Link_2">
+<span class="Text">Win</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<!-- Body -->
+<div class="Body">
+<!-- Navigation -->
+<div class="Navigation">
+<div class="Left">
+<!-- Menu -->
+<ul class="Menu C9" id="Content_Content_Navigation_Wrapper">
+<li class="Item Icon HideBelowLeaderboard C1" id="Content_Content_Navigation_MenuRepeater_Item_0">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/explore/" id="Content_Content_Navigation_MenuRepeater_Link_0">
+<span class="Text"><span class="Sprite Compass"><span class="Clipped">Explore</span></span></span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Parent Text Explore HideBelowHamburger C2" id="Content_Content_Navigation_MenuRepeater_Item_1">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/explore/" id="Content_Content_Navigation_MenuRepeater_Link_1">
+<span class="Text">Explore</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_0">
+<a class="australia" href="/australia/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_0">
+<span class="Text">Australia</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_1">
+<a class="animals" href="/animals/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_1">
+<span class="Text">Animals</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_2">
+<a class="engineering" href="/engineering/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_2">
+<span class="Text">Engineering</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_3">
+<a class="history" href="/history/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_3">
+<span class="Text">History</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_4">
+<a class="nature" href="/nature/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_4">
+<span class="Text">Nature</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_5">
+<a class="people" href="/people/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_5">
+<span class="Text">People</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_6">
+<a class="science" href="/science/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_6">
+<span class="Text">Science</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_7">
+<a class="space" href="/space/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_7">
+<span class="Text">Space</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Item_8">
+<a class="travel" href="/travel/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_1_Link_8">
+<span class="Text">Travel</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Text Videos HideBelowHamburger C3" id="Content_Content_Navigation_MenuRepeater_Item_2">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/videos/" id="Content_Content_Navigation_MenuRepeater_Link_2">
+<span class="Text">Videos</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Text Selected HideBelowHamburger C4" id="Content_Content_Navigation_MenuRepeater_Item_3">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/news/" id="Content_Content_Navigation_MenuRepeater_Link_3">
+<span class="Text">News</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Parent Text TV HideBelowHamburger C5" id="Content_Content_Navigation_MenuRepeater_Item_4">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/tv/" id="Content_Content_Navigation_MenuRepeater_Link_4">
+<span class="Text">TV</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_4_Item_0">
+<a class="Shows" href="/tv/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_4_Link_0">
+<span class="Text">Shows</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_4_Item_1">
+<a class="TV Guide" href="/tvguide/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_4_Link_1">
+<span class="Text">TV Guide</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Parent Text Travel HideBelowHamburger C6" id="Content_Content_Navigation_MenuRepeater_Item_5">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/travel/" id="Content_Content_Navigation_MenuRepeater_Link_5">
+<span class="Text">Travel</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_5_Item_0">
+<a class="Destinations" href="/travel/destinations" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_5_Link_0">
+<span class="Text">Destinations</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_5_Item_1">
+<a class="Trip Types" href="/travel/trip-types" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_5_Link_1">
+<span class="Text">Trip Types</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_5_Item_2">
+<a class="Why Travel With Us" href="/travel/why-travel-with-us" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_5_Link_2">
+<span class="Text">Why Travel With Us?</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_5_Item_3">
+<a class="How To Book" href="/travel/how-to-book" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_5_Link_3">
+<span class="Text">How To Book</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Parent Text Store HideBelowHamburger C7" id="Content_Content_Navigation_MenuRepeater_Item_6">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/store/" id="Content_Content_Navigation_MenuRepeater_Link_6">
+<span class="Text">Store</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li class="Last" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_6_Item_0">
+<a class="Luggage" href="/store/luggage" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_6_Link_0">
+<span class="Text">Luggage</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Span Parent Text More HideBelowHamburger C8" id="Content_Content_Navigation_MenuRepeater_Item_7">
+<div class="Container">
+<span class="Elements">
+<span class="Link" id="Content_Content_Navigation_MenuRepeater_Link_7">
+<span class="Text">More</span>
+</span>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_7_Item_0">
+<a class="Events" href="/events/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_7_Link_0">
+<span class="Text">Events</span>
+</a>
+</li>
+<li id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_7_Item_1">
+<a class="App" href="/app/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_7_Link_1">
+<span class="Text">App</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_7_Item_2">
+<a class="Win" href="/win/" id="Content_Content_Navigation_MenuRepeater_DropdownRepeater_7_Link_2">
+<span class="Text">Win</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Icon Expand Last C9" id="Content_Content_Navigation_MenuRepeater_Item_8">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="#" id="Content_Content_Navigation_MenuRepeater_Link_8">
+<span class="Text"><span class="Sprite Hamburger"><span class="Clipped">Open Menu</span></span></span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+</ul>
+</div>
+<div class="Right">
+<ul class="Menu">
+<li class="Item Icon Form">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/search/">
+<span class="Text">
+<span class="Sprite Search">
+<span class="Clipped">Search</span>
+</span>
+</span>
+</a>
+</span>
+<form action="/search/" autocomplete="off" class="InlineSearch Validate">
+<!-- Input Wrap -->
+<div class="InputWrap Required HideError" id="Content_Content_ctl00_InputWrapControl">
+<!-- Label -->
+<!-- Parent -->
+<div class="InputParent">
+<!-- Input -->
+<div class="Input">
+<span class="Placeholder" id="Content_Content_ctl00_PlaceholderWrapper">What are you looking for?</span>
+<input id="ctl00$ctl00$ctl00$Content$Content$ctl00$q" name="q" tabindex="0" type="text" value=""/>
+</div>
+<!-- Options -->
+</div>
+</div>
+</form>
+</div>
+</li>
+<li class="Item Icon HideBelowLeaderboard User">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/register/">
+<span class="Text">
+<span class="Sprite User">
+<span class="Clipped">User</span>
+</span>
+</span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Span Icon HideBelowLeaderboard Follow Parent">
+<div class="Container">
+<span class="Elements">
+<span class="Link">
+<span class="Text">
+<span class="Sprite Facebook"><!-- Sprite --></span>
+<span class="Sprite Twitter"><!-- Sprite --></span>
+<span class="Clipped">Follow</span>
+</span>
+</span>
+</span>
+<!-- Follow -->
+<ul>
+<li>
+<a href="https://www.facebook.com/natgeoau/" target="_blank">
+<span class="Sprite Facebook">
+<span class="Clipped">Facebook</span>
+</span>
+<span class="Text">Facebook</span>
+</a>
+</li><!--
+--><li>
+<a href="https://twitter.com/natgeoau" target="_blank">
+<span class="Sprite Twitter">
+<span class="Clipped">Twitter</span>
+</span>
+<span class="Text">Twitter</span>
+</a>
+</li><!--
+--><li>
+<a href="https://www.youtube.com/user/natgeotvau" target="_blank">
+<span class="Sprite YouTube">
+<span class="Clipped">YouTube</span>
+</span>
+<span class="Text">YouTube</span>
+</a>
+</li><!--
+--><li>
+<a href="http://natgeotvau-blog.tumblr.com" target="_blank">
+<span class="Sprite Tumblr">
+<span class="Clipped">Tumblr</span>
+</span>
+<span class="Text">Tumblr</span>
+</a>
+</li><!--
+--><li class="Last">
+<a href="https://instagram.com/natgeoau" target="_blank">
+<span class="Sprite Instagram">
+<span class="Clipped">Instagram</span>
+</span>
+<span class="Text">Instagram</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<a class="Logo" href="/">
+<img alt="National Geographic" class="White" src="/includes/images/logo.png?v=30"/>
+<img alt="National Geographic" class="Black" src="/includes/images/logo-inverted.png?v=30"/>
+</a>
+<span class="Background"><!-- Background --></span>
+<span class="Shadow"><!-- Shadow --></span>
+</div>
+<!-- Advert -->
+<!-- Content -->
+<div class="Content">
+<!-- Carousel -->
+<!-- Carousel -->
+<div class="Carousel" id="Content_Content_Content_Carousel_Carousel">
+<!-- Slider -->
+<div class="Slider" data-auto-play="False" data-draggable="False" data-initial-slide="0" data-items-per-slide="1" data-loop="True" data-total-slides="3" data-touchable="True" id="Content_Content_Content_Carousel_Slider_Slider">
+<!-- Arrows -->
+<!-- Slider -->
+<div class="SliderOverflow">
+<div class="SliderWrapper" id="Content_Content_Content_Carousel_Slider_SliderWrapper" style=" margin-left:0%; width:300%">
+<table class="SliderTable">
+<tr>
+<td class="SliderItem" id="Content_Content_Content_Carousel_Slider_SliderRepeater_SliderItem_0">
+<!-- Markup -->
+<!-- Highlight -->
+<div class="Markup Highlight">
+<span class="Block" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_0_Link_0">
+<span class="LazyLoader" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_0_LazyLoader_0_LazyLoader_0">
+<img alt="Meet Australia's urban flying foxes—and the people trying to help them" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/bat-rescuers-gimesy_douglas_20170223_dsc0768-edit.ngsversion.1542195020454.adapt.1900.1.jpg?auto=compress,format&amp;w=1920&amp;h=960&amp;fit=crop" height="960" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_0_LazyLoader_0_LazyImage_0" src="https://natgeo.imgix.net/factsheets/thumbnails/bat-rescuers-gimesy_douglas_20170223_dsc0768-edit.ngsversion.1542195020454.adapt.1900.1.jpg?auto=compress,format&amp;w=1920&amp;h=960&amp;fit=crop" width="1920"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</span>
+</div>
+<!-- Backdrop -->
+<span class="Backdrop">
+<span><!-- Backdrop --></span>
+</span>
+</td>
+<td class="SliderItem" id="Content_Content_Content_Carousel_Slider_SliderRepeater_SliderItem_1">
+<!-- Markup -->
+<!-- Highlight -->
+<div class="Markup Highlight">
+<span class="Block" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_1_Link_1">
+<span class="LazyLoader" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_1_LazyLoader_1_LazyLoader_1">
+<img alt="Why California's wildfires are so hard to fight" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/01_cawildfire_rts25ljw.ngsversion.1542062526969.adapt.1900.1.jpg?auto=compress,format&amp;w=1920&amp;h=960&amp;fit=crop" height="960" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_1_LazyLoader_1_LazyImage_1" src="https://natgeo.imgix.net/factsheets/thumbnails/01_cawildfire_rts25ljw.ngsversion.1542062526969.adapt.1900.1.jpg?auto=compress,format&amp;w=1920&amp;h=960&amp;fit=crop" width="1920"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</span>
+</div>
+<!-- Backdrop -->
+<span class="Backdrop">
+<span><!-- Backdrop --></span>
+</span>
+</td>
+<td class="SliderItem" id="Content_Content_Content_Carousel_Slider_SliderRepeater_SliderItem_2">
+<!-- Markup -->
+<!-- Highlight -->
+<div class="Markup Highlight">
+<span class="Block" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_2_Link_2">
+<span class="LazyLoader" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_2_LazyLoader_2_LazyLoader_2">
+<img alt="Plan an epic trip to Scotland" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/scotland-richardson-traveler-1.ngsversion.1541698763893.adapt.1900.1.jpg?auto=compress,format&amp;w=1920&amp;h=960&amp;fit=crop" height="960" id="Content_Content_Content_Carousel_Slider_SliderRepeater_ctl00_2_LazyLoader_2_LazyImage_2" src="https://natgeo.imgix.net/factsheets/thumbnails/scotland-richardson-traveler-1.ngsversion.1541698763893.adapt.1900.1.jpg?auto=compress,format&amp;w=1920&amp;h=960&amp;fit=crop" width="1920"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</span>
+</div>
+<!-- Backdrop -->
+<span class="Backdrop">
+<span><!-- Backdrop --></span>
+</span>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<!-- Custom Markup -->
+<a class="Arrow Back Disabled Hidden" data-direction="previous" href="#">
+<span class="Preview">
+<img alt="" data-src="https://natgeo.imgix.net/factsheets/thumbnails/bat-rescuers-gimesy_douglas_20170223_dsc0768-edit.ngsversion.1542195020454.adapt.1900.1.jpg?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" height="100" src="https://natgeo.imgix.net/inline/clear.png?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" width="180"/>
+<img alt="" data-src="https://natgeo.imgix.net/factsheets/thumbnails/01_cawildfire_rts25ljw.ngsversion.1542062526969.adapt.1900.1.jpg?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" height="100" src="https://natgeo.imgix.net/inline/clear.png?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" width="180"/>
+<img alt="" data-src="https://natgeo.imgix.net/factsheets/thumbnails/scotland-richardson-traveler-1.ngsversion.1541698763893.adapt.1900.1.jpg?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" height="100" src="https://natgeo.imgix.net/inline/clear.png?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" width="180"/>
+</span>
+<span class="Icon">
+<span class="Sprite Back">
+<span class="Clipped">Back</span>
+</span>
+<span class="Background"><!-- Background --></span>
+</span>
+</a>
+<a class="Arrow Next Disabled" data-direction="next" href="#">
+<span class="Preview">
+<img alt="" data-src="https://natgeo.imgix.net/factsheets/thumbnails/bat-rescuers-gimesy_douglas_20170223_dsc0768-edit.ngsversion.1542195020454.adapt.1900.1.jpg?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" height="100" src="https://natgeo.imgix.net/inline/clear.png?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" width="180"/>
+<img alt="" data-src="https://natgeo.imgix.net/factsheets/thumbnails/01_cawildfire_rts25ljw.ngsversion.1542062526969.adapt.1900.1.jpg?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" height="100" src="https://natgeo.imgix.net/inline/clear.png?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" width="180"/>
+<img alt="" data-src="https://natgeo.imgix.net/factsheets/thumbnails/scotland-richardson-traveler-1.ngsversion.1541698763893.adapt.1900.1.jpg?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" height="100" src="https://natgeo.imgix.net/inline/clear.png?auto=compress,format&amp;w=180&amp;h=100&amp;fit=crop" width="180"/>
+</span>
+<span class="Icon">
+<span class="Sprite Next">
+<span class="Clipped">Next</span>
+</span>
+<span class="Background"><!-- Background --></span>
+</span>
+</a>
+<div class="Panel">
+<div>
+<div>
+<div>
+<div>
+<div class="Container">
+<span class="Timer">
+<span><!-- Timer --></span>
+</span>
+<ul class="Text">
+<li class="Selected">
+<p class="Byline">Featured News</p>
+<h2 class="Title"><a href="/animals/meet-australias-urban-flying-foxesand-the-people-trying-to-help-them.aspx">Meet Australia's urban flying foxes—and the people trying to help them</a></h2>
+<p class="Description">A local photographer captures stunning images of the flying foxes that struggle to hang on in the city—and the humans who look after them.</p>
+</li>
+<li class="Unselected">
+<p class="Byline">Featured News</p>
+<h2 class="Title"><a href="/nature/why-californias-wildfires-are-so-hard-to-fight.aspx">Why California's wildfires are so hard to fight</a></h2>
+<p class="Description">The state is full of steep canyons and rolling hillsides that firefighters struggle to reach.</p>
+</li>
+<li class="Unselected">
+<p class="Byline">Featured News</p>
+<h2 class="Title"><a href="/travel/plan-an-epic-trip-to-scotland.aspx">Plan an epic trip to Scotland</a></h2>
+<p class="Description">Here's an insider’s guide to the best of Scotland, from Edinburgh to the Highlands and beyond.</p>
+</li>
+</ul>
+<div class="Buttons"><!--
+--><a class="Selected" href="#"><!-- Button --></a><!--
+--><a class="Unselected" href="#"><!-- Button --></a><!--
+--><a class="Unselected" href="#"><!-- Button --></a><!--
+--></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Buttons -->
+</div>
+</div>
+<!-- Breadcrumbs -->
+<div class="Breadcrumbs">
+<ol itemscope="" itemtype="http://schema.org/BreadcrumbList">
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a href="/" itemprop="item">
+<span itemprop="name">Home</span>
+<meta content="1" itemprop="position">
+</meta></a>
+</li>
+<li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+<a href="/news/" itemprop="item">
+<span itemprop="name">News</span>
+<meta content="2" itemprop="position">
+</meta></a>
+</li>
+</ol>
+</div>
+<!-- Heading -->
+<!-- Heading -->
+<div class="Heading">
+<div>
+<div>
+<div>
+<div class="Left">
+<h1 id="Content_Content_Content_Heading_TitleTag">News</h1>
+</div>
+<div class="Right">
+<a class="Box" href="#" target="_self">
+<span>
+<span>
+<span>Get Newsletter</span>
+</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Filters -->
+<!-- Filters -->
+<div class="Filters Border" id="Content_Content_Content_Filters_Wrapper">
+<div>
+<div>
+<!-- Menu -->
+<ul class="Menu C3" id="Content_Content_Content_Filters_Filters_Wrapper">
+<li class="Item Text Selected C1" id="Content_Content_Content_Filters_Filters_MenuRepeater_Item_0">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/news/" id="Content_Content_Content_Filters_Filters_MenuRepeater_Link_0">
+<span class="Text">The Latest</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Text C2" id="Content_Content_Content_Filters_Filters_MenuRepeater_Item_1">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/news/trending.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_Link_1">
+<span class="Text">What's Trending</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+<li class="Item Span Parent Text Last C3" id="Content_Content_Content_Filters_Filters_MenuRepeater_Item_2">
+<div class="Container">
+<span class="Elements">
+<span class="Link" id="Content_Content_Content_Filters_Filters_MenuRepeater_Link_2">
+<span class="Text">Subjects</span>
+</span>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_0">
+<a href="/news/australia.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_0">
+<span class="Text">Australia</span>
+</a>
+</li>
+<li id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_1">
+<a href="/news/animals.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_1">
+<span class="Text">Animals</span>
+</a>
+</li>
+<li id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_2">
+<a href="/news/engineering.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_2">
+<span class="Text">Engineering</span>
+</a>
+</li>
+<li id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_3">
+<a href="/news/history.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_3">
+<span class="Text">History</span>
+</a>
+</li>
+<li id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_4">
+<a href="/news/nature.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_4">
+<span class="Text">Nature</span>
+</a>
+</li>
+<li id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_5">
+<a href="/news/people.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_5">
+<span class="Text">People</span>
+</a>
+</li>
+<li id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_6">
+<a href="/news/science.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_6">
+<span class="Text">Science</span>
+</a>
+</li>
+<li id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_7">
+<a href="/news/space.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_7">
+<span class="Text">Space</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Item_8">
+<a href="/news/travel.aspx" id="Content_Content_Content_Filters_Filters_MenuRepeater_DropdownRepeater_2_Link_8">
+<span class="Text">Travel</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Text Selected Top C4" id="Content_Content_Content_Filters_Filters_MenuRepeater_Item_3">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/news/" id="Content_Content_Content_Filters_Filters_MenuRepeater_Link_3">
+<span class="Text"><span class="SelectedText">The Latest</span><span class="CloseText">Close</span></span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Feed -->
+<!-- Feed -->
+<div class="Feed">
+<div class="Mask" id="Content_Content_Content_Feed_Mask">
+<div class="Wrap">
+<div class="Packery">
+<!-- Text -->
+<div class="Markup Generic Copy Followable Stamped" id="Content_Content_Content_Feed_Repeater_ctl00_0_Item_0">
+<div class="Container">
+<a class="Follow" data-id="6124" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_0_Follow_0">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/travel/go-inside-the-middle-easts-ultramodern-city-of-extravagance.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_0_LazyLoader_0_LazyLoader_0">
+<img alt="Go inside the Middle East's ultramodern city of extravagance" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/dubai-united-arab-emirates05.ngsversion.1542740404238.adapt.1900.1.jpg?auto=compress,format&amp;w=640&amp;h=360&amp;fit=crop" height="360" id="Content_Content_Content_Feed_Repeater_ctl00_0_LazyLoader_0_LazyImage_0" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAFoCAYAAADHMkpRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOUSURBVHhe7cExAQAAAMKg9U9tDB8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOahI6AAEqA/vRAAAAAElFTkSuQmCC" width="640"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">22 November 2018</span>
+<a class="Title" href="/travel/go-inside-the-middle-easts-ultramodern-city-of-extravagance.aspx">Go inside the Middle East's ultramodern city of extravagance</a>
+<div class="Description">
+				Dubai's untamed diversity makes it far and away one of the most cosmopolitan cities on Earth.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Stamped" id="Content_Content_Content_Feed_Repeater_ctl00_1_Item_1">
+<div class="Container">
+<a class="Follow" data-id="6122" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_1_Follow_1">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/animals/birds-are-building-simpler-nests-and-more-bird-breakthroughs.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_1_LazyLoader_1_LazyLoader_1">
+<img alt="Birds are building simpler nests and more bird breakthroughs" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/embark-year-of-the-bird.ngsversion.1542212761430.adapt.1900.1.jpg?auto=compress,format&amp;w=640&amp;h=360&amp;fit=crop" height="360" id="Content_Content_Content_Feed_Repeater_ctl00_1_LazyLoader_1_LazyImage_1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAFoCAYAAADHMkpRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOUSURBVHhe7cExAQAAAMKg9U9tDB8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOahI6AAEqA/vRAAAAAElFTkSuQmCC" width="640"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">22 November 2018</span>
+<a class="Title" href="/animals/birds-are-building-simpler-nests-and-more-bird-breakthroughs.aspx">Birds are building simpler nests and more bird breakthroughs</a>
+<div class="Description">
+				Parrots crack each other up, plus a success story from the Year of the Bird.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Stamped" id="Content_Content_Content_Feed_Repeater_ctl00_2_Item_2">
+<div class="Container">
+<a class="Follow" data-id="6123" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_2_Follow_2">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/science/landing-on-mars-is-harder-than-you-think-heres-how-nasa-prepares.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_2_LazyLoader_2_LazyLoader_2">
+<img alt="Landing on Mars is harder than you think. Here’s how NASA prepares." class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/i8985_181106_0390.ngsversion.1542810458834.adapt.945.1.jpg?auto=compress,format&amp;w=640&amp;h=360&amp;fit=crop" height="360" id="Content_Content_Content_Feed_Repeater_ctl00_2_LazyLoader_2_LazyImage_2" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAoAAAAFoCAYAAADHMkpRAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOUSURBVHhe7cExAQAAAMKg9U9tDB8gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACOahI6AAEqA/vRAAAAAElFTkSuQmCC" width="640"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">22 November 2018</span>
+<a class="Title" href="/science/landing-on-mars-is-harder-than-you-think-heres-how-nasa-prepares.aspx">Landing on Mars is harder than you think. Here’s how NASA prepares.</a>
+<div class="Description">
+				Practice makes perfect when sending a robot on the perilous journey to the red planet.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_3_Item_3">
+<div class="Container">
+<a class="Follow" data-id="6117" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_3_Follow_3">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/travel/10-mouthwatering-museums-dedicated-to-food-and-drink.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_3_LazyLoader_3_LazyLoader_3">
+<img alt="10 mouthwatering museums dedicated to food and drink" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/food-museums-01.ngsversion.1542213141420.adapt.1900.1.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_3_LazyLoader_3_LazyImage_3" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">21 November 2018</span>
+<a class="Title" href="/travel/10-mouthwatering-museums-dedicated-to-food-and-drink.aspx">10 mouthwatering museums dedicated to food and drink</a>
+<div class="Description">
+				Whet your appetite at these food factories and museums around the world.
+			</div>
+</div>
+</div>
+</div>
+<!-- Mrec -->
+<div class="Markup Item Mrec" id="Content_Content_Content_Feed_Repeater_ctl00_4_StandardMrec_4">
+<span class="mcnamf" id="FeedMrec" title="300x250"><!-- Advert --></span>
+</div>
+<!-- Mrec -->
+<!-- Mrec -->
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_5_Item_5">
+<div class="Container">
+<a class="Follow" data-id="6118" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_5_Follow_5">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/nature/sperm-whale-found-dead-with-13-pounds-of-plastic-in-its-stomach.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_5_LazyLoader_5_LazyLoader_5">
+<img alt="Sperm whale found dead with 13 pounds of plastic in its stomach" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/smpost_1542816295530.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_5_LazyLoader_5_LazyImage_5" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">21 November 2018</span>
+<a class="Title" href="/nature/sperm-whale-found-dead-with-13-pounds-of-plastic-in-its-stomach.aspx">Sperm whale found dead with 13 pounds of plastic in its stomach</a>
+<div class="Description">
+				The animal had swallowed plastic bags, bottles, flip-flops, and 115 drinking cups.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_6_Item_6">
+<div class="Container">
+<a class="Follow" data-id="6120" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_6_Follow_6">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/science/meet-the-woman-who-discovered-a-whole-new-type-of-galaxy.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_6_LazyLoader_6_LazyLoader_6">
+<img alt="Meet the woman who discovered a whole new type of galaxy" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/01_new_galaxy_ted_52634958_full.ngsversion.1542812251504.adapt.1900.1.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_6_LazyLoader_6_LazyImage_6" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">21 November 2018</span>
+<a class="Title" href="/science/meet-the-woman-who-discovered-a-whole-new-type-of-galaxy.aspx">Meet the woman who discovered a whole new type of galaxy</a>
+<div class="Description">
+				Turkish-born astrophysicist Burçin Mutlu-Pakdil shares her name with a rare double ring of stars more than 350 light-years away.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_7_Item_7">
+<div class="Container">
+<a class="Follow" data-id="6119" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_7_Follow_7">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/nature/black-friday-shopping-hurts-the-environmentbut-you-can-help.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_7_LazyLoader_7_LazyLoader_7">
+<img alt="Black Friday shopping hurts the environment—but you can help" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/black_friday_environment_h_14736264.ngsversion.1542644555526.adapt.1900.1.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_7_LazyLoader_7_LazyImage_7" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">21 November 2018</span>
+<a class="Title" href="/nature/black-friday-shopping-hurts-the-environmentbut-you-can-help.aspx">Black Friday shopping hurts the environment—but you can help</a>
+<div class="Description">
+				Shoppers will spend more in the post-Thanksgiving rush than any other time of the year.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_8_Item_8">
+<div class="Container">
+<a class="Follow" data-id="6113" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_8_Follow_8">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/australia/who-are-tahitis-teenage-coral-gardeners.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_8_LazyLoader_8_LazyLoader_8">
+<img alt="Who are Tahiti’s teenage coral gardeners?" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/coralgardenersreplant.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_8_LazyLoader_8_LazyImage_8" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">20 November 2018</span>
+<a class="Title" href="/australia/who-are-tahitis-teenage-coral-gardeners.aspx">Who are Tahiti’s teenage coral gardeners?</a>
+<div class="Description">
+				How this group of 18-20-year-olds are helping restore the reef surrounding Mo’orea.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_9_Item_9">
+<div class="Container">
+<a class="Follow" data-id="6114" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_9_Follow_9">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/animals/these-birds-are-one-of-the-rare-animals-that-hide-to-mate.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_9_LazyLoader_9_LazyLoader_9">
+<img alt="These birds are one of the rare animals that hide to mate" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/smpost_1542730999343.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_9_LazyLoader_9_LazyImage_9" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">20 November 2018</span>
+<a class="Title" href="/animals/these-birds-are-one-of-the-rare-animals-that-hide-to-mate.aspx">These birds are one of the rare animals that hide to mate</a>
+<div class="Description">
+				Besides humans, few species hide sexual activity. Arabian babblers are one such species; keeping mating private may preserve the peace.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_10_Item_10">
+<div class="Container">
+<a class="Follow" data-id="6115" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_10_Follow_10">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/travel/witness-historic-day-of-the-dead-rituals-in-naples-italy.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_10_LazyLoader_10_LazyLoader_10">
+<img alt="Witness historic Day of the Dead rituals in Naples, Italy" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/naples-exhumation-ceremony.ngsversion.1542738601024.adapt.1900.1.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_10_LazyLoader_10_LazyImage_10" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">20 November 2018</span>
+<a class="Title" href="/travel/witness-historic-day-of-the-dead-rituals-in-naples-italy.aspx">Witness historic Day of the Dead rituals in Naples, Italy</a>
+<div class="Description">
+				Relatives and strangers alike celebrate the giorno dei morti in these crowded, ancient tombs.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_11_Item_11">
+<div class="Container">
+<a class="Follow" data-id="6116" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_11_Follow_11">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/animals/how-cat-tongues-workand-can-inspire-human-tech.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_11_LazyLoader_11_LazyLoader_11">
+<img alt="How cat tongues work—and can inspire human tech" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/01-cat-groom-nationalgeographic-1031934.ngsversion.1542657609178.adapt.1900.1.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_11_LazyLoader_11_LazyImage_11" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">20 November 2018</span>
+<a class="Title" href="/animals/how-cat-tongues-workand-can-inspire-human-tech.aspx">How cat tongues work—and can inspire human tech</a>
+<div class="Description">
+				Scientists used CT scans to get up close and personal with cat tongues to learn their secrets.
+			</div>
+</div>
+</div>
+</div>
+<!-- Text -->
+<div class="Markup Generic Copy Followable Item" id="Content_Content_Content_Feed_Repeater_ctl00_12_Item_12">
+<div class="Container">
+<a class="Follow" data-id="6112" data-type="article" href="#" id="Content_Content_Content_Feed_Repeater_ctl00_12_Follow_12">
+<span class="Sprite Heart">
+<span class="Clipped">Follow</span>
+</span>
+</a>
+<a class="Image" href="/animals/these-animals-eat-absurd-amounts-of-food.aspx">
+<span class="LazyLoader LazyUnloaded" id="Content_Content_Content_Feed_Repeater_ctl00_12_LazyLoader_12_LazyLoader_12">
+<img alt="These animals eat absurd amounts of food" class="LazyImage" data-src="https://natgeo.imgix.net/factsheets/thumbnails/01-waq-animal-eaters-nationalgeographic_1459553.ngsversion.1542717011178.adapt.1900.1.jpg?auto=compress,format&amp;w=300&amp;h=169&amp;fit=crop" height="169" id="Content_Content_Content_Feed_Repeater_ctl00_12_LazyLoader_12_LazyImage_12" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAACpCAYAAACRdwCqAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADcSURBVHhe7cEBDQAAAMKg909tDjcgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPhTAxkGAAH83Sy0AAAAAElFTkSuQmCC" width="300"/>
+<span class="LazyPlaceholder">loading...</span>
+</span>
+</a>
+<div class="Padding">
+<span class="Byline">20 November 2018</span>
+<a class="Title" href="/animals/these-animals-eat-absurd-amounts-of-food.aspx">These animals eat absurd amounts of food</a>
+<div class="Description">
+				Humans on Thanksgiving are no match for these extreme eaters, like hummingbirds, who eat twice their body weight in a day.
+			</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="Pagination">
+<!-- Next -->
+<a class="Next" href="https://www.nationalgeographic.com.au/news/?p=2" id="Content_Content_Content_Feed_Pagination_NextPage">Load More</a>
+<!-- Previous -->
+<a class="Previous Disabled" id="Content_Content_Content_Feed_Pagination_PreviousPage">Go Back</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Skins -->
+</div>
+<!-- Advert -->
+<div class="Advert Leaderboard">
+<div>
+<div>
+<span class="mcnamf" title="728x90"><!-- Advert --></span>
+</div>
+</div>
+</div>
+<!-- Newsletter -->
+<div class="Newsletter">
+<div>
+<h2>Newsletter</h2>
+<p>Never miss a Nat Geo moment</p>
+<form action="" autocomplete="off" class="Validate" data-action="/includes/ajax/subscribe.aspx?ListID=1">
+<!-- Input Wrap -->
+<div class="InputWrap Required HideError" id="Content_Content_ctl02_InputWrapControl">
+<!-- Label -->
+<!-- Parent -->
+<div class="InputParent">
+<!-- Input -->
+<div class="Input">
+<span class="Placeholder" id="Content_Content_ctl02_PlaceholderWrapper">Your email address</span>
+<input id="ctl00$ctl00$ctl00$Content$Content$ctl02$EmailAddress" name="EmailAddress" tabindex="0" type="text" value=""/>
+</div>
+<!-- Options -->
+</div>
+</div>
+<input name="Referrer" type="hidden" value="/news/"/>
+<a class="Submit" href="#">
+<span class="Sprite Right">
+<span class="Clipped">Submit</span>
+</span>
+</a>
+</form>
+</div>
+<img alt="" src="https://natgeo.imgix.net/misc/newsletter.jpg?auto=compress,format&amp;w=1920&amp;h=400&amp;fit=crop"/>
+</div>
+<!-- Footer -->
+<div class="Footer">
+<div class="Top">
+<div class="Wrapper">
+<div class="Left">
+<a class="Logo" href="/tvguide/"><img alt="National Geographic" src="/includes/images/logo.png?v=30" width="166"/></a>
+<p class="Subtitle">National Geographic explores the people, places and events of our world.</p>
+<p>National Geographic showcases leading explorers, scientists, environmentalists, film makers and renowned photographers.</p>
+<p class="SansSerif"><a href="/about/">Learn more</a></p>
+</div>
+<div class="Right">
+<!-- Menu -->
+<ul class="Menu C4" id="Content_Content_Sitemap_Wrapper">
+<li class="Item Parent Text Explore C1" id="Content_Content_Sitemap_MenuRepeater_Item_0">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/explore/" id="Content_Content_Sitemap_MenuRepeater_Link_0">
+<span class="Text">Explore</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_0">
+<a class="australia" href="/australia/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_0">
+<span class="Text">Australia</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_1">
+<a class="animals" href="/animals/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_1">
+<span class="Text">Animals</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_2">
+<a class="engineering" href="/engineering/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_2">
+<span class="Text">Engineering &amp; Science</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_3">
+<a class="history" href="/history/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_3">
+<span class="Text">History</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_4">
+<a class="nature" href="/nature/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_4">
+<span class="Text">Nature</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_5">
+<a class="people" href="/people/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_5">
+<span class="Text">People</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_6">
+<a class="science" href="/science/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_6">
+<span class="Text">Science</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_7">
+<a class="space" href="/space/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_7">
+<span class="Text">Space</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Item_8">
+<a class="travel" href="/travel/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_0_Link_8">
+<span class="Text">Travel</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Parent Text Website C2" id="Content_Content_Sitemap_MenuRepeater_Item_1">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/" id="Content_Content_Sitemap_MenuRepeater_Link_1">
+<span class="Text">Website</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Item_0">
+<a class="Videos" href="/videos/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Link_0">
+<span class="Text">Videos</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Item_1">
+<a class="News" href="/news/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Link_1">
+<span class="Text">News</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Item_2">
+<a class="TV Shows" href="/tv/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Link_2">
+<span class="Text">TV Shows</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Item_3">
+<a class="TV Guide" href="/tvguide/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Link_3">
+<span class="Text">TV Guide</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Item_4">
+<a class="Win" href="/win/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Link_4">
+<span class="Text">Win</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Item_5">
+<a class="Events" href="/events/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Link_5">
+<span class="Text">Events</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Item_6">
+<a class="Register" href="/register/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_1_Link_6">
+<span class="Text">Register</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Parent Text About C3" id="Content_Content_Sitemap_MenuRepeater_Item_2">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/about/" id="Content_Content_Sitemap_MenuRepeater_Link_2">
+<span class="Text">About</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Item_0">
+<a class="Commercial" href="/about/commercial.aspx" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Link_0">
+<span class="Text">Commercial</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Item_1">
+<a class="Feedback" href="/about/feedback.aspx" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Link_1">
+<span class="Text">Feedback</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Item_2">
+<a class="Terms" href="/about/terms.aspx" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Link_2">
+<span class="Text">Terms</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Item_3">
+<a class="Privacy" href="/about/privacy.aspx" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Link_3">
+<span class="Text">Privacy</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Item_4">
+<a class="Get Foxtel" href="http://www.foxtel.com.au" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Link_4">
+<span class="Text">Get Foxtel</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Item_5">
+<a class="Get SKY" href="http://www.sky.com" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Link_5">
+<span class="Text">Get SKY</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Item_6">
+<a class="Get Fetch TV" href="http://www.fetchtv.com.au" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_2_Link_6">
+<span class="Text">Get Fetch TV</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Parent Text Games Last C4" id="Content_Content_Sitemap_MenuRepeater_Item_3">
+<div class="Container">
+<span class="Elements">
+<a class="Link" href="/games/" id="Content_Content_Sitemap_MenuRepeater_Link_3">
+<span class="Text">Games</span>
+</a>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+<ul>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Item_0">
+<a class="Jetman" href="/games/jetman/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Link_0">
+<span class="Text">Jetman</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Item_1">
+<a class="Fact or Fiction" href="/games/fact-or-fiction/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Link_1">
+<span class="Text">Fact or Fiction</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Item_2">
+<a class="My Brilliant Brain" href="/games/my-brilliant-brain/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Link_2">
+<span class="Text">My Brilliant Brain</span>
+</a>
+</li>
+<li id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Item_3">
+<a class="Are They Identical" href="/games/are-they-identical/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Link_3">
+<span class="Text">Are They Identical</span>
+</a>
+</li>
+<li class="Last" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Item_4">
+<a class="Crocs n Logs" href="/games/crocs-and-logs/" id="Content_Content_Sitemap_MenuRepeater_DropdownRepeater_3_Link_4">
+<span class="Text">Crocs 'n Logs</span>
+</a>
+</li>
+</ul>
+</div>
+</li>
+<li class="Item Span Text Top C5" id="Content_Content_Sitemap_MenuRepeater_Item_4">
+<div class="Container">
+<span class="Elements">
+<span class="Link" id="Content_Content_Sitemap_MenuRepeater_Link_4">
+<span class="Text"><span class="SelectedText">Site Map</span><span class="CloseText">Close</span></span>
+</span>
+<a class="Button Collapse" href="#">
+<span class="Sprite Left"><!-- Sprite --></span>
+</a>
+<a class="Button Expand" href="#">
+<span class="Sprite Up"><!-- Sprite --></span>
+<span class="Sprite Down"><!-- Sprite --></span>
+</a>
+<a class="Button Toggle" href="#">
+<span class="Sprite Minus"><!-- Sprite --></span>
+<span class="Sprite Plus"><!-- Sprite --></span>
+</a>
+</span>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="Bottom">
+<ul class="Logos">
+<li>
+<ul>
+<li>
+<a href="/tv/">
+<span class="Sprite NatGeo">
+<span class="Clipped">National Geographic</span>
+</span>
+</a>
+</li>
+<li>
+<a href="/tv/wild/">
+<span class="Sprite NatGeoWild">
+<span class="Clipped">Nat Geo Wild</span>
+</span>
+</a>
+</li>
+</ul>
+</li>
+<li>
+<ul>
+<li>
+<a href="http://www.foxtel.com.au" target="_blank">
+<span class="Sprite Foxtel">
+<span class="Clipped">Foxtel</span>
+</span>
+</a>
+</li>
+</ul>
+</li>
+<li class="Last">
+<ul>
+<li>
+<a href="http://www.fetchtv.com.au" target="_blank">
+<span class="Sprite FetchTV">
+<span class="Clipped">FetchTV</span>
+</span>
+</a>
+</li>
+<li>
+<a href="http://www.sky.com" target="_blank">
+<span class="Sprite Sky">
+<span class="Clipped">Sky</span>
+</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+<div class="Wrapper">
+<div class="Left">
+						© 2016 National Geographic. All rights reserved. Site by <a href="http://www.chook.com.au/">Chook Digital Agency</a>.
+				 	</div>
+<div class="Right">
+<!-- Follow -->
+<ul>
+<li>
+<a href="https://www.facebook.com/natgeoau/" target="_blank">
+<span class="Sprite Facebook">
+<span class="Clipped">Facebook</span>
+</span>
+<span class="Text">Facebook</span>
+</a>
+</li><!--
+--><li>
+<a href="https://twitter.com/natgeoau" target="_blank">
+<span class="Sprite Twitter">
+<span class="Clipped">Twitter</span>
+</span>
+<span class="Text">Twitter</span>
+</a>
+</li><!--
+--><li>
+<a href="https://www.youtube.com/user/natgeotvau" target="_blank">
+<span class="Sprite YouTube">
+<span class="Clipped">YouTube</span>
+</span>
+<span class="Text">YouTube</span>
+</a>
+</li><!--
+--><li>
+<a href="http://natgeotvau-blog.tumblr.com" target="_blank">
+<span class="Sprite Tumblr">
+<span class="Clipped">Tumblr</span>
+</span>
+<span class="Text">Tumblr</span>
+</a>
+</li><!--
+--><li class="Last">
+<a href="https://instagram.com/natgeoau" target="_blank">
+<span class="Sprite Instagram">
+<span class="Clipped">Instagram</span>
+</span>
+<span class="Text">Instagram</span>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Video -->
+<div class="Video Modal">
+<div class="Table">
+<div class="Row">
+<div class="Cell">
+<div class="Foreground">
+<a class="Box Icon Selected Close" href="#">
+<span>
+<span>
+<span>
+<span class="Sprite Close">
+<span class="Clipped">Close</span>
+</span>
+</span>
+</span>
+</span>
+</a>
+<div class="Container"><!-- Container --></div>
+</div>
+</div>
+</div>
+</div>
+<a class="Background" href="#"><!-- Background --></a>
+</div>
+<!-- Sign In -->
+<div class="SignIn Modal">
+<div class="Table">
+<div class="Row">
+<div class="Cell">
+<div class="Foreground">
+<a class="Cancel Close" href="#">
+<span class="Sprite Close">
+<span class="Clipped">Close</span>
+</span>
+</a>
+<p class="Headline">Member Sign In</p>
+<div class="Container"><!-- Container --></div>
+</div>
+</div>
+</div>
+</div>
+<a class="Background" href="#"><!-- Background --></a>
+</div>
+<!-- Remind -->
+<div class="Remind Modal">
+<div class="Table">
+<div class="Row">
+<div class="Cell">
+<div class="Foreground">
+<a class="Cancel Close" href="#">
+<span class="Sprite Close">
+<span class="Clipped">Close</span>
+</span>
+</a>
+<p class="Headline">Set Reminder</p>
+<div class="Container"><!-- Container --></div>
+</div>
+</div>
+</div>
+</div>
+<a class="Background" href="#"><!-- Background --></a>
+</div>
+<!-- Benefits -->
+<div class="Benefits Modal">
+<div class="Table">
+<div class="Row">
+<div class="Cell">
+<div class="Foreground">
+<a class="Box Icon Selected Close" href="#">
+<span>
+<span>
+<span>
+<span class="Sprite Close">
+<span class="Clipped">Close</span>
+</span>
+</span>
+</span>
+</span>
+</a>
+<div class="Container">
+<div class="Title">
+<div>
+<div>
+<h2>Join Us!</h2>
+<p>Join our curious community and you'll have access to some great features!</p>
+</div>
+</div>
+</div>
+<div class="Text">
+<p>
+<span class="Box Icon">
+<span>
+<span>
+<span>
+<span class="Sprite Tag"><!-- Sprite --></span>
+</span>
+</span>
+</span>
+</span>
+<span class="Copy">Personalised content reflecting your interests on the site</span>
+</p>
+<p>
+<span class="Box Icon">
+<span>
+<span>
+<span>
+<span class="Sprite Right"><!-- Sprite --></span>
+</span>
+</span>
+</span>
+</span>
+<span class="Copy">Watch exclusive videos before anyone else</span>
+</p>
+<p>
+<span class="Box Icon">
+<span>
+<span>
+<span>
+<span class="Sprite Heart"><!-- Sprite --></span>
+</span>
+</span>
+</span>
+</span>
+<span class="Copy">Favourite content that you like or want to check out later</span>
+</p>
+<p>
+<span class="Box Icon">
+<span>
+<span>
+<span>
+<span class="Sprite Phone"><!-- Sprite --></span>
+</span>
+</span>
+</span>
+</span>
+<span class="Copy">Free SMS and Email reminders so you never miss a show</span>
+</p>
+<p>
+<span class="Box Icon">
+<span>
+<span>
+<span>
+<span class="Sprite Bell"><!-- Sprite --></span>
+</span>
+</span>
+</span>
+</span>
+<span class="Copy">Get notified when content that interests you is published</span>
+</p>
+<p>
+<span class="Box Icon">
+<span>
+<span>
+<span>
+<span class="Sprite Camera"><!-- Sprite --></span>
+</span>
+</span>
+</span>
+</span>
+<span class="Copy">Share your photos on Snap! that could appear on TV</span>
+</p>
+<p>
+<span class="Box Icon">
+<span>
+<span>
+<span>
+<span class="Sprite Comment"><!-- Sprite --></span>
+</span>
+</span>
+</span>
+</span>
+<span class="Copy">Share your thoughts and opinions on various matters</span>
+</p>
+<p>
+<span class="Box Icon">
+<span>
+<span>
+<span>
+<span class="Sprite Email"><!-- Sprite --></span>
+</span>
+</span>
+</span>
+</span>
+<span class="Copy">Receive a monthly newsletter with loads of great content</span>
+</p>
+</div>
+<a class="Box Selected Close" href="#">
+<span>
+<span>
+<span>
+												Thanks! I'm done
+											</span>
+</span>
+</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<a class="Background" href="#"><!-- Background --></a>
+</div>
+<!-- Share -->
+<!-- Share -->
+<div class="Share Modal" data-media="https://www.nationalgeographic.com.au/content/social/social.png" data-text="News" data-url="https://www.nationalgeographic.com.au/news/">
+<div class="Table">
+<div class="Row">
+<div class="Cell">
+<div class="Foreground">
+<p class="Headline">Share This</p>
+<a class="Cancel Close" href="#">
+<span class="Sprite Close">
+<span class="Clipped">Close</span>
+</span>
+</a>
+<table>
+<tr>
+<td>
+<a class="Facebook" data-href="https://www.facebook.com/sharer/sharer.php?u={escapedUrl}" href="#" target="_blank">
+<span class="Sprite Facebook">
+<span class="Clipped">Share</span>
+</span>
+</a>
+</td>
+<td>
+<a class="Twitter" data-href="https://twitter.com/share?text={escapedText}&amp;url={escapedUrl}" href="#" target="_blank">
+<span class="Sprite Twitter">
+<span class="Clipped">Tweet</span>
+</span>
+</a>
+</td>
+<td>
+<a class="Tumblr" data-href="http://www.tumblr.com/share/link?url={escapedUrl}" href="#" target="_blank">
+<span class="Sprite Tumblr">
+<span class="Clipped">Tumblr</span>
+</span>
+</a>
+</td>
+<td>
+<a class="Pinterest" data-href="http://pinterest.com/pin/create/button/?url={escapedUrl}&amp;media={escapedMedia}&amp;description={escapedText}" href="#" target="_blank">
+<span class="Sprite Pinterest">
+<span class="Clipped">Pinterest</span>
+</span>
+</a>
+</td>
+</tr>
+</table>
+<form>
+<!-- Input Wrap -->
+<div class="InputWrap Required" id="Content_Content_ctl04_Link_InputWrapControl">
+<!-- Label -->
+<!-- Parent -->
+<div class="InputParent">
+<!-- Input -->
+<div class="Input">
+<input id="ctl00$ctl00$ctl00$Content$Content$ctl04$Link$ShareLink" name="ShareLink" tabindex="0" type="text" value=""/>
+</div>
+<!-- Options -->
+</div>
+</div>
+</form>
+<ul>
+<li>
+<a class="SelectLink Submit" href="#">Select Link</a>
+</li>
+<li>
+<a class="EmailLink Submit" href="#">Email Link</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<a class="Background" href="#"><!-- Background --></a>
+</div>
+<!-- Gallery -->
+<!-- Plastics Pledge -->
+</div>
+<!-- jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/includes/js/plugins/jquery.min.js"><\/script>')</script>
+<!-- Validation -->
+<script src="/includes/js/plugins/jquery.validate.min.js" type="text/javascript"></script>
+<!-- Chook -->
+<script src="/includes/js/chook/chook.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/chook/forms.js?v=30" type="text/javascript"></script>
+<!-- Layout -->
+<script src="/includes/js/layout.js?v=30" type="text/javascript"></script>
+<!-- Server Side Console Logging -->
+<!-- Scripts -->
+<!-- Chook TV -->
+<script src="/chooktv/dist/chooktv.js?v=30" type="text/javascript"></script>
+<!-- Plugins -->
+<script src="/includes/js/plugins/webfont.min.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/plugins/packery.min.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/plugins/tweenmax.min.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/plugins/jquery.mobile.min.js?v=30" type="text/javascript"></script>
+<!-- Chook -->
+<script src="/includes/js/chook/connect.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/chook/play.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/chook/lazyloader.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/chook/slider.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/chook/modals.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/chook/share.js?v=30" type="text/javascript"></script>
+<script src="/includes/js/chook/gallery.js?v=30" type="text/javascript"></script>
+<!-- Layout -->
+<script type="text/javascript">
+		$(function () {
+			layout.widths = {  feedTablet:980, feedPadding:40, itemMargin:40, stickyNavigation:60, viewport:1024, scrollbar:17, desktop:1660, tablet:1024, retina:640, mobile:320, feedDesktop:1660, feedLaptop:1320, feedRetina:640, feedMobile:300, itemLargeWidth:640, itemSmallWidth:300, itemSmallHeight:169, leaderboard:728, leaderboardPadding:10, exploreTablet:900, explorePadding:40, logo:134, hamburger:1240, pillarCollapse:1374, pillarStack:1108, navigation:60 };
+			layout.master();
+			$('.Skin a').click(function (event) {
+				var href = $(this).attr('href');
+				event.preventDefault();
+				secondTracker._trackEvent('Skin', 'Click', href);
+				setTimeout(function () {
+					window.location.href = href;
+				}, 200);
+			});
+			$('.JamesCameronMrec').click(function (event) {
+				var href = $(this).attr('href');
+				event.preventDefault();
+				secondTracker._trackEvent('Mrec', 'Click', href);
+				setTimeout(function () {
+					window.location.href = href;
+				}, 200);
+			});
+
+			// Outbound link tracking
+			$('a').filter(function () {
+				var href = $(this).attr('href');
+				return href !== undefined && href !== null && href.length && href.indexOf('://') !== -1 && href.indexOf('nationalgeographic.com.au') === -1;
+			}).click(function (event) {
+				var href = $(this).attr('href');
+				event.preventDefault();
+				secondTracker._trackEvent('Outbound Link', 'Click', href);
+				setTimeout(function () {
+					window.location.href = href;
+				}, 100);
+			});
+
+		});
+	</script>
+<!-- Plastics Pledge -->
+<script type="text/javascript">
+		$(function () {
+			if ($('.PlasticsPledge').length) {
+				plasticsPrevScrollTop = 0;
+				$(window).scroll(function () {
+					if ($(window).scrollTop() + $(window).height() < $('.Newsletter').offset().top) {
+						$('.PlasticsPledge').addClass('Visible');
+					} else {
+						$('.PlasticsPledge').removeClass('Visible');
+					}
+					if (Math.abs($(window).scrollTop() - plasticsPrevScrollTop) > 100) {
+						plasticsPrevScrollTop = $(window).scrollTop();
+					}
+				});
+			}
+		});
+	</script>
+<!-- Shared JS Variables -->
+<script type="text/javascript">
+
+    	// Window
+    	var facebookClientID = '129533167123797',
+			facebookScope = 'email',
+			siteUrl = 'https://www.nationalgeographic.com.au';
+
+    </script>
+<!-- Facebook -->
+<div id="fb-root"></div>
+<script type="text/javascript">
+		(function (d) {
+			var js, id = 'facebook-jssdk';
+			if (d.getElementById(id)) {
+				return;
+			}
+			js = d.createElement('script');
+			js.id = id;
+			js.async = true;
+			js.src = "//connect.facebook.net/en_US/all.js";
+			d.getElementsByTagName('head')[0].appendChild(js);
+		}(document));
+	</script>
+<!-- Footer -->
+<!-- Scripts -->
+<script type="text/javascript">
+		$(function () {
+			
+			// Carousel
+			layout.carousel();
+			
+			// Feed
+			layout.feed();
+			
+			// Heading
+			$('.Heading a').click(function (event) {
+				event.preventDefault();
+				$('html, body').animate({ scrollTop: $('.Layout > .Newsletter').offset().top - layout.widths.navigation }, 1000);
+			});
+			
+		});
+	</script>
+<!-- Nielsen -->
+<script type="text/javascript">var _rsCI = "cogs", _rsCG = "0", _rsDN = "//secure-au.imrworldwide.com/";</script>
+<script src="//secure-au.imrworldwide.com/v53.js" type="text/javascript"></script>
+<noscript><div><img alt="" src="//secure-au.imrworldwide.com/cgi-bin/m?ci=cogs&amp;cg=0&amp;cc=1"/></div></noscript>
+<!-- Fox Networks Behavioral Tracking -->
+<img alt="" class="TrackingPixel" height="1" src="http://ad.yieldmanager.com/pixel?id=2013463&amp;t=2" width="1"/>
+<!-- Advertising -->
+<script type="text/javascript">
+			(function () {
+				var e = document.createElement('script'), protocol = 'https:' == document.location.protocol ? 'https:' : 'http:';
+				e.async = true;
+				e.src = protocol + '//medrx.telstra.com.au/mcn/cube.min.js';
+				var n = document.getElementsByTagName('script')[0];
+				n.parentNode.insertBefore(e, n);
+			})();
+			window._mcn = {};
+			_mcn.config = [];
+			_mcn.config.push(function () {
+				_mcn.publisher('national.geographic');
+				_mcn.amf.targeting('area', 'news').targeting('device', 'Desktop');
+			});
+		</script>
+</body>
+</html>
+

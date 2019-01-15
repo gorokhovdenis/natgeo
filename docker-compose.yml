@@ -1,0 +1,26 @@
+version: '3'
+services:
+  bot6:
+    build: ./6bot_geo
+    restart: always
+  
+  bot5:
+    build: ./5bot_geo
+    restart: always
+
+  bot4:
+    build: ./4bot_geo
+    restart: always
+
+  bot3:
+    build: ./3bot_geo
+    restart: always
+
+  bot2:
+    build: ./2bot_geo
+    restart: always
+
+  bot1:
+    build: ./1bot_geo
+    restart: always
+
