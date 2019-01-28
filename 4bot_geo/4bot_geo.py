@@ -40,14 +40,14 @@ while True:
 		link()
 		time.sleep(5)
 		c=link()
-		time.sleep(360)
+		time.sleep(9560)
 	elif b == c:
 		print("The strings are the same b: "+str(b))
 		time.sleep(5)
 		link()
 		time.sleep(5)
 		c=link()
-		time.sleep(360)
+		time.sleep(9560)
 	else:
 		print("The strings are not the same")
 		post()
