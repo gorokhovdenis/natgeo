@@ -5,6 +5,7 @@ import time
 import telebot
 import json
 from socket import timeout
+import config
 def link():
     req = Request('https://www.nationalgeographic.com/', headers={'User-Agent': 'Mozilla/62.0'})
     time.sleep(2)
@@ -20,8 +21,8 @@ def link():
         pass
 def post():
     try:
-        BOT_TOKEN ="681010915:AAFmaiTSpNN7DfVVY3Bp2pTjuHtg-PsccfE"
-        CHANNEL_NAME = "@natgeofeed"
+        BOT_TOKEN = config.BOT_TOKEN
+        CHANNEL_NAME = config.CHANNEL_NAME
         time.sleep(1)
         bot = telebot.TeleBot(BOT_TOKEN)
         time.sleep(1)
