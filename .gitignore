@@ -28,3 +28,4 @@ requirements.txt
 soup
 tst.py
 url
+insta/config.py
