@@ -28,5 +28,5 @@ after_success:
   - chmod 600 /tmp/deploy_key
   - ssh-add /tmp/deploy_key
   - git config --global push.default matching
-  - git remote add deploy ssh://$USER@$IP:$PORT/tmp/test
+  - git remote add deploy ssh://git@$IP:$PORT/tmp/test
   - git push deploy master
