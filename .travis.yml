@@ -1,5 +1,7 @@
-dist: trusty
-sudo: false
+notifications:
+  email:
+    on_success: never # default: change
+    on_failure: never # default: always
 env:
   global:
   - PORT=55333
@@ -8,16 +10,15 @@ addons:
   ssh_known_hosts: "$IP:$PORT"
 before_install:
 - openssl aes-256-cbc -K $encrypted_59648f6afd5a_key -iv $encrypted_59648f6afd5a_iv
-  -in id_rsa.enc -out ./id_rsa -d
+  -in deploy_key.enc -out ./deploy_key -d
 - eval "$(ssh-agent -s)"
-- chmod 600 ./id_rsa
+- chmod 600 ./deploy_key
 - echo -e "Host $IP\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-- ssh-add ./id_rsa
-- ssh -p $PORT -i ./id_rsa $USER@$IP pwd
+- ssh-add ./deploy_key
+- ssh -p $PORT -i ./deploy_key $USER@$IP pwd
 deploy:
 - provider: script
   skip_cleanup: true
-  script: rsync -avz -e "ssh -p $PORT" -r --delete-after --quiet $TRAVIS_BUILD_DIR/
-    $USER@$IP:/tmp/test
+  script: rsync -avz -e "ssh -p $PORT" -r --delete-after --quiet $TRAVIS_BUILD_DIR/ $USER@$IP:/tmp/test
   on:
     branch: master
