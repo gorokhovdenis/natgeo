@@ -15,4 +15,4 @@ before_install:
 - chmod 600 ./deploy_key
 - echo -e "Host $IP\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 - ssh-add ./deploy_key
-- ssh -p $PORT -i ./deploy_key $USER@$ip pwd
+- ssh -p $PORT -i ./deploy_key $USER@$IP pwd
