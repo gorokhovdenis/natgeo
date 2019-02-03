@@ -19,7 +19,6 @@ before_install:
 deploy:
 - provider: script
   skip_cleanup: true
-  script: rsync -avz -e "ssh -p $PORT" -r --delete-after --quiet $TRAVIS_BUILD_DIR/
-    $USER@$IP:/tmp/test
+  script: "bash .travis/deploy.sh"
   on:
     branch: master
