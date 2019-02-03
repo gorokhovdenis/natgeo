@@ -17,7 +17,7 @@ before_install:
 - ssh-add ./id_rsa
 #- ssh -p $PORT -i ./id_rsa $USER@$IP pwd
 deploy:
-- provider: script
+  provider: script
   skip_cleanup: true
   script: "bash .travis/deploy.sh"
   on:
