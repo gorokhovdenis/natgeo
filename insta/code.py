@@ -7,6 +7,7 @@ import json
 from socket import timeout
 import re
 import config
+import os
 def link():
     req = Request('https://www.instagram.com/natgeo/', headers={'User-Agent': 'Mozilla/62.0'})
     time.sleep(2)
@@ -23,8 +24,8 @@ def link():
         pass
 def post():
     try:
-        BOT_TOKEN = config.BOT_TOKEN
-        CHANNEL_NAME = config.CHANNEL_NAME
+        BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
+		CHANNEL_NAME = os.environ.get("CHANNEL_NAME", None)
         time.sleep(1)
         bot = telebot.TeleBot(BOT_TOKEN)
         time.sleep(1)
