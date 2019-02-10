@@ -5,6 +5,8 @@ services:
     restart: always
     volumes:
       - ./6bot_geo:/code
+    env_file:
+      - .env
   
   bot5:
     build: ./5bot_geo
@@ -35,6 +37,8 @@ services:
     restart: always
     volumes:
       - ./1bot_geo:/code
+    env_file:
+      - .env
 
   insta:
     build: ./insta
