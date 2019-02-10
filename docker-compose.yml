@@ -55,4 +55,3 @@ services:
       - ./insta:/code
     env_file:
       - .env      
-
