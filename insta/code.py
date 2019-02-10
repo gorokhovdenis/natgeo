@@ -26,7 +26,6 @@ def post():
 #    try:
     BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
     CHANNEL_NAME = os.environ.get("CHANNEL_NAME", None)
-    print (BOT_TOKEN)
     print (CHANNEL_NAME)
     time.sleep(1)
 #    bot = telebot.TeleBot(BOT_TOKEN)
