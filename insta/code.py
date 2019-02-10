@@ -32,7 +32,7 @@ def post():
     bot = telebot.TeleBot(BOT_TOKEN)
     print (bot)
     time.sleep(1)
-    #bot.send_message(CHANNEL_NAME, c)
+    bot.send_message(CHANNEL_NAME, c)
     time.sleep(1)
 #    except Exception:
 #        pass
