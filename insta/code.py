@@ -24,12 +24,12 @@ def link():
         pass
 def post():
 #    try:
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
-    CHANNEL_NAME = os.environ.get("CHANNEL_NAME", None)
+    #BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
+    #CHANNEL_NAME = os.environ.get("CHANNEL_NAME", None)
     time.sleep(1)
-    bot = telebot.TeleBot(BOT_TOKEN)
+    bot = telebot.TeleBot(os.environ.get("BOT_TOKEN", None))
     time.sleep(1)
-    bot.send_message(CHANNEL_NAME, c)
+    bot.send_message(os.environ.get("CHANNEL_NAME", None), c)
     time.sleep(1)
 #    except Exception:
 #        pass
@@ -58,4 +58,3 @@ while True:
 		print (c)
 		a=b
 		b=c
-
