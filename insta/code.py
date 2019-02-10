@@ -25,7 +25,7 @@ def link():
 def post():
     try:
         BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
-		CHANNEL_NAME = os.environ.get("CHANNEL_NAME", None)
+        CHANNEL_NAME = os.environ.get("CHANNEL_NAME", None)
         time.sleep(1)
         bot = telebot.TeleBot(BOT_TOKEN)
         time.sleep(1)
