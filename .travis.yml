@@ -2,6 +2,10 @@ sudo: required
 language: generic
 services:
   - docker
+notifications:
+  email:
+    on_success: never
+    on_failure: never
 after_success:
   - docker build -t gorokhovdenis/natgeo_bot1 ./1bot_geo
   - docker build -t gorokhovdenis/natgeo_bot2 ./2bot_geo
