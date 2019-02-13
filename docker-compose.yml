@@ -1,7 +1,8 @@
 version: '3'
 services:
   bot6:
-    build: ./6bot_geo
+    image: gorokhovdenis/natgeo_bot6:latest
+#    build: ./6bot_geo
     restart: always
     volumes:
       - ./6bot_geo:/code
@@ -9,7 +10,7 @@ services:
       - .env
   
   bot5:
-    build: ./5bot_geo
+    image: gorokhovdenis/natgeo_bot5:latest
     restart: always
     volumes:
       - ./5bot_geo:/code
@@ -17,7 +18,7 @@ services:
       - .env
 
   bot4:
-    build: ./4bot_geo
+    image: gorokhovdenis/natgeo_bot4:latest
     restart: always
     volumes:
       - ./4bot_geo:/code
@@ -25,7 +26,7 @@ services:
       - .env
 
   bot3:
-    build: ./3bot_geo
+    image: gorokhovdenis/natgeo_bot3:latest
     restart: always
     volumes:
       - ./3bot_geo:/code
@@ -33,7 +34,7 @@ services:
       - .env
 
   bot2:
-    build: ./2bot_geo
+    image: gorokhovdenis/natgeo_bot2:latest
     restart: always
     volumes:
       - ./2bot_geo:/code
@@ -41,7 +42,7 @@ services:
       - .env
 
   bot1:
-    build: ./1bot_geo
+    image: gorokhovdenis/natgeo_bot1:latest
     restart: always
     volumes:
       - ./1bot_geo:/code
@@ -49,7 +50,7 @@ services:
       - .env
 
   insta:
-    build: ./insta
+    image: gorokhovdenis/natgeo_insta:latest
     restart: always
     volumes:
       - ./insta:/code
