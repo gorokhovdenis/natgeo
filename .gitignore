@@ -32,3 +32,4 @@ insta/config.py
 deploy_key
 id_rsa
 .env
+deploy_key.pub

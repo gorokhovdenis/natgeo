@@ -1,24 +1,37 @@
 sudo: required
 language: generic
 services:
-  - docker
+- docker
 notifications:
   email:
     on_success: never
     on_failure: never
+env:
+  global:
+  - PORT=55333
+  - DEPLOY_DIR=/home/Docker/natgeo/
+before_install:
+- openssl aes-256-cbc -K $encrypted_59648f6afd5a_key -iv $encrypted_59648f6afd5a_iv
+  -in deploy_key.enc -out ./deploy_key -d
 after_success:
-  - docker build -t gorokhovdenis/natgeo_bot1 ./1bot_geo
-  - docker build -t gorokhovdenis/natgeo_bot2 ./2bot_geo
-  - docker build -t gorokhovdenis/natgeo_bot3 ./3bot_geo
-  - docker build -t gorokhovdenis/natgeo_bot4 ./4bot_geo
-  - docker build -t gorokhovdenis/natgeo_bot5 ./5bot_geo
-  - docker build -t gorokhovdenis/natgeo_bot6 ./6bot_geo
-  - docker build -t gorokhovdenis/natgeo_insta ./insta
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker push gorokhovdenis/natgeo_bot1
-  - docker push gorokhovdenis/natgeo_bot2
-  - docker push gorokhovdenis/natgeo_bot3
-  - docker push gorokhovdenis/natgeo_bot4
-  - docker push gorokhovdenis/natgeo_bot5
-  - docker push gorokhovdenis/natgeo_bot6
-  - docker push gorokhovdenis/natgeo_insta
+- docker build -t gorokhovdenis/natgeo_bot1 ./1bot_geo
+- docker build -t gorokhovdenis/natgeo_bot2 ./2bot_geo
+- docker build -t gorokhovdenis/natgeo_bot3 ./3bot_geo
+- docker build -t gorokhovdenis/natgeo_bot4 ./4bot_geo
+- docker build -t gorokhovdenis/natgeo_bot5 ./5bot_geo
+- docker build -t gorokhovdenis/natgeo_bot6 ./6bot_geo
+- docker build -t gorokhovdenis/natgeo_insta ./insta
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+- docker push gorokhovdenis/natgeo_bot1
+- docker push gorokhovdenis/natgeo_bot2
+- docker push gorokhovdenis/natgeo_bot3
+- docker push gorokhovdenis/natgeo_bot4
+- docker push gorokhovdenis/natgeo_bot5
+- docker push gorokhovdenis/natgeo_bot6
+- docker push gorokhovdenis/natgeo_insta
+deploy:
+  provider: script
+  skip_cleanup: true
+  script: chmod 600 deploy_key && ssh -p $PORT -o StrictHostKeyChecking=no -i deploy_key $USER@$IP $DEPLOY_DIR/deploy.sh
+  on:
+    branch: master
