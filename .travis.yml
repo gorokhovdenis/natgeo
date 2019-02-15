@@ -32,6 +32,6 @@ after_success:
 deploy:
   provider: script
   skip_cleanup: true
-  script: chmod 600 deploy_key && ssh -p $PORT -o StrictHostKeyChecking=no -i deploy_key $USER@$IP $DEPLOY_DIR/deploy.sh
+  script: chmod 600 deploy_key && ssh -p $PORT -o StrictHostKeyChecking=no -i deploy_key root@$IP $DEPLOY_DIR/deploy.sh
   on:
     branch: master
