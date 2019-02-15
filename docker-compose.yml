@@ -4,55 +4,43 @@ services:
     image: gorokhovdenis/natgeo_bot6:latest
 #    build: ./6bot_geo
     restart: always
-    volumes:
-      - ./6bot_geo:/code
+#    volumes:
+#      - ./6bot_geo:/code
     env_file:
       - .env
   
   bot5:
     image: gorokhovdenis/natgeo_bot5:latest
     restart: always
-    volumes:
-      - ./5bot_geo:/code
     env_file:
       - .env
 
   bot4:
     image: gorokhovdenis/natgeo_bot4:latest
     restart: always
-    volumes:
-      - ./4bot_geo:/code
     env_file:
       - .env
 
   bot3:
     image: gorokhovdenis/natgeo_bot3:latest
     restart: always
-    volumes:
-      - ./3bot_geo:/code
     env_file:
       - .env
 
   bot2:
     image: gorokhovdenis/natgeo_bot2:latest
     restart: always
-    volumes:
-      - ./2bot_geo:/code
     env_file:
       - .env
 
   bot1:
     image: gorokhovdenis/natgeo_bot1:latest
     restart: always
-    volumes:
-      - ./1bot_geo:/code
     env_file:
       - .env
 
   insta:
     image: gorokhovdenis/natgeo_insta:latest
     restart: always
-    volumes:
-      - ./insta:/code
     env_file:
       - .env      
