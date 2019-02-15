@@ -5,7 +5,6 @@ import time
 import telebot
 import json
 from socket import timeout
-import config
 import os
 def link():
     req = Request('https://www.nationalgeographic.com/', headers={'User-Agent': 'Mozilla/62.0'})

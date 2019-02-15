@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import time
 import telebot
 import json
-import config
 from socket import timeout
 import os
 def link():

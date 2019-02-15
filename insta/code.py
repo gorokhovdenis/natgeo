@@ -6,7 +6,6 @@ import telebot
 import json
 from socket import timeout
 import re
-import config
 import os
 def link():
     req = Request('https://www.instagram.com/natgeo/', headers={'User-Agent': 'Mozilla/62.0'})
