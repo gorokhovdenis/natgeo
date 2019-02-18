@@ -8,10 +8,10 @@ from socket import timeout
 import re
 import os
 def link():
-    req = Request('https://www.instagram.com/natgeo/', headers={'User-Agent': 'Mozilla/62.0'})
-    time.sleep(2)
-    page=urlopen(req,timeout=10).read()
     try:
+        req = Request('https://www.instagram.com/natgeo/', headers={'User-Agent': 'Mozilla/62.0'})
+        time.sleep(2)
+        page=urlopen(req,timeout=10).read()
         soup = BeautifulSoup(page,"html.parser")
         data = soup.find('script', type='text/javascript').find_next('script', type='text/javascript').find_next('script', type='text/javascript').find_next('script', type='text/javascript').text
         time.sleep(1)
