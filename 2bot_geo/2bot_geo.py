@@ -6,6 +6,7 @@ import telebot
 import json
 from socket import timeout
 import os
+import redis
 def link():
     req = Request('https://www.nationalgeographic.com/', headers={'User-Agent': 'Mozilla/62.0'})
     time.sleep(2)
@@ -26,35 +27,28 @@ def post():
         time.sleep(1)
         bot = telebot.TeleBot(BOT_TOKEN)
         time.sleep(1)
-        bot.send_message(CHANNEL_NAME, c)
+        bot.send_message(CHANNEL_NAME, link())
         time.sleep(1)
     except Exception:
         pass
-a=""
-b=""
-c=link()
+def getlastpost():
+        redis_host = "redis-server"
+        redis_port = 6379
+        r = redis.StrictRedis(host=redis_host, port=redis_port, decode_responses=True)
+        msg = r.get("2geo:last")
+        return msg
+def setlastpost():
+        redis_host = "redis-server"
+        redis_port = 6379
+        r = redis.StrictRedis(host=redis_host, port=redis_port, decode_responses=True)
+        r.set("2geo:last", link())		
 while True:
-	time.sleep(1)
-	if a == c:
-		print("The strings are the same: "+str(a))
-		time.sleep(5)
+	if link() == getlastpost():
+		print("The url is already posted")
 		link()
-		time.sleep(5)
-		c=link()
-		time.sleep(3360)
-		time.sleep(360)
-	elif b == c:
-		print("The strings are the same b: "+str(b))
-		time.sleep(5)
-		link()
-		time.sleep(5)
-		c=link()
-		time.sleep(3360)
-		time.sleep(360)
+		time.sleep(1360)
 	else:
 		print("The strings are not the same")
 		post()
-		print (c)
-		a=b
-		b=c
-
+		setlastpost()
+		print (link())

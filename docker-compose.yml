@@ -1,5 +1,9 @@
 version: '3'
 services:
+  redis-server:
+  image: redis
+  volumes:
+    - .:/data
   bot6:
     image: gorokhovdenis/natgeo_bot6:latest
 #    build: ./6bot_geo
@@ -8,7 +12,7 @@ services:
 #      - ./6bot_geo:/code
     env_file:
       - .env
-  
+
   bot5:
     image: gorokhovdenis/natgeo_bot5:latest
     restart: always
