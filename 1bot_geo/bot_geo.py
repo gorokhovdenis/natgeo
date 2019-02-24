@@ -7,6 +7,7 @@ import json
 from socket import timeout
 import os
 import redis
+#test
 def link():
     req = Request('https://www.nationalgeographic.com/', headers={'User-Agent': 'Mozilla/62.0'})
     time.sleep(2)
