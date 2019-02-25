@@ -48,12 +48,12 @@ def setlastpost():
                 pass
 while True:
         c = getlastpost()
-	if link() == c:
-		print("The url is already posted")
-		link()
-		time.sleep(1360)
-	else:
-		print("The strings are not the same")
-		post()
-		setlastpost()
-		print (link())
+        if link() == c:
+                print("The url is already posted")
+                link()
+                time.sleep(1360)
+        else:
+                print("The strings are not the same")
+                post()
+                setlastpost()
+                print (link())
