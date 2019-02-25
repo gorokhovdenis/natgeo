@@ -22,7 +22,7 @@ after_success:
 - docker build -t gorokhovdenis/natgeo_bot6 ./6bot_geo
 - docker build -t gorokhovdenis/natgeo_insta ./insta
 - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-- docker push gorokhovdenis/natgeo_bot1
+- docker push gorokhovdenis/natgeo_bot1:latest
 - docker push gorokhovdenis/natgeo_bot2
 - docker push gorokhovdenis/natgeo_bot3
 - docker push gorokhovdenis/natgeo_bot4
