@@ -9,19 +9,16 @@ import re
 import os
 import redis
 def link():
-        try:
-                req = Request('https://www.instagram.com/natgeo/', headers={'User-Agent': 'Mozilla/62.0'})
-                time.sleep(2)
-                page=urlopen(req,timeout=10).read()
-                soup = BeautifulSoup(page,"html.parser")
-                data = soup.find('script', type='text/javascript').find_next('script', type='text/javascript').find_next('script', type='text/javascript').find_next('script', type='text/javascript').text
-                time.sleep(1)
-                json_data=json.loads(data[21:-1])
-                linktmp = (json_data['entry_data']['ProfilePage'][0]["graphql"]['user']['edge_owner_to_timeline_media']['edges'][0]['node']['shortcode'])
-                link='https://www.instagram.com/p/'+linktmp
-                return link
-        except Exception:
-                pass
+        req = Request('https://www.instagram.com/natgeo/', headers={'User-Agent': 'Mozilla/62.0'})
+        time.sleep(2)
+        page=urlopen(req,timeout=10).read()
+        soup = BeautifulSoup(page,"html.parser")
+        data = soup.find('script', type='text/javascript').find_next('script', type='text/javascript').find_next('script', type='text/javascript').find_next('script', type='text/javascript').text
+        time.sleep(1)
+        json_data=json.loads(data[21:-1])
+        linktmp = (json_data['entry_data']['ProfilePage'][0]["graphql"]['user']['edge_owner_to_timeline_media']['edges'][0]['node']['shortcode'])
+        link='https://www.instagram.com/p/'+linktmp
+        return link
 def post():
         try:
                 BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
@@ -48,8 +45,7 @@ def setlastpost():
         except Exception:
                 pass
 while True:
-	c = getlastpost()
-	if link() == c:
+	if link() == getlastpost():
 		print("The url is already posted")
 		link()
 		time.sleep(1360)

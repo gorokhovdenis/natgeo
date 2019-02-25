@@ -9,18 +9,15 @@ import os
 import redis
 #test
 def link():
-        try:
-                req = Request('https://www.nationalgeographic.com/', headers={'User-Agent': 'Mozilla/62.0'})
-                time.sleep(2)
-                page=urlopen(req,timeout=10).read()
-                time.sleep(2)
-                soup = BeautifulSoup(page,"html.parser")
-                time.sleep(1)
-                data = json.loads(soup.find('script', type='text/json').find_next('script', type='text/json').text)
-                link = (data["body"][0]['homepage_package']["cards"][0]['uri'])
-                return link
-        except Exception:
-                pass
+        req = Request('https://www.nationalgeographic.com/', headers={'User-Agent': 'Mozilla/62.0'})
+        time.sleep(2)
+        page=urlopen(req,timeout=10).read()
+        time.sleep(2)
+        soup = BeautifulSoup(page,"html.parser")
+        time.sleep(1)
+        data = json.loads(soup.find('script', type='text/json').find_next('script', type='text/json').text)
+        link = (data["body"][0]['homepage_package']["cards"][0]['uri'])
+        return link
 def post():
 	try:
 		BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
@@ -47,8 +44,7 @@ def setlastpost():
         except Exception:
                 pass
 while True:
-        c = getlastpost()
-        if link() == c:
+        if link() == getlastpost():
                 print("The url is already posted")
                 link()
                 time.sleep(1360)
