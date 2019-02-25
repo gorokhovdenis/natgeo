@@ -47,7 +47,8 @@ def setlastpost():
         except Exception:
                 pass
 while True:
-	if link() == getlastpost() or link() == 'None':
+        c = getlastpost()
+	if link() == c:
 		print("The url is already posted")
 		link()
 		time.sleep(1360)
